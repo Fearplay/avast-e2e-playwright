@@ -33,9 +33,9 @@
 ## Usage
 
 * Run the following command to execute **all tests**:
-```
-pytest
-```
+  ```
+  pytest
+  ```
 
 ## Other
 
