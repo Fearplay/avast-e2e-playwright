@@ -1,7 +1,7 @@
-from playwright.sync_api import Page, expect
+import re
 
 import pytest
-import re
+from playwright.sync_api import Page, expect
 
 
 @pytest.fixture(scope="function")
@@ -15,6 +15,7 @@ class TestStorePage:
     def setup_store(self, go_to_store):
         pass
 
-    @pytest.mark.skip(reason="not need to test this now")
+    @pytest.mark.desktoptest
     def test_url_is_right(self, page: Page):
+        """Test that the 'store page' has 'store' url"""
         expect(page).to_have_url(re.compile(r"/store"))
