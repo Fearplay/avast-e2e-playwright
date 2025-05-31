@@ -40,6 +40,16 @@
   pytest -m desktoptest    
   ```
 
+* Run the following command to run **Playwright in headed mode**:
+  ```
+  pytest --headed 
+  ```
+
+* Run the following command to run **record of the browser session**:
+  ```
+  pytest --tracing=on
+  ```
+
 ## Other
 
 * If you find any issue, please don't hesitate to report it
