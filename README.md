@@ -39,10 +39,20 @@
   ```
   pytest -m desktoptest    
   ```
+  
+* Run the following command to execute **android and ios tests**:
+  ```
+  pytest -m "not desktoptest"
+  ```
 
 * Run the following command to run **Playwright in headed mode**:
   ```
   pytest --headed 
+  ```
+
+* Run the following command to see **prints**:
+  ```
+  pytest -s 
   ```
 
 * Run the following command to run **record of the browser session**:
