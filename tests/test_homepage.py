@@ -69,3 +69,11 @@ class TestHomePage:
         """Test that the download button works."""
         with page.expect_download():
             page.locator(".btn.full.size-lg.theme-blue.btn-icon-left.bi-download-link.js-pc.mb-16.mb-lg-0").click()
+
+    @pytest.mark.androidtest
+    def test_android_url(self, android_page):
+        print("\n[MOBILE] Current URL:", android_page.url)
+
+    @pytest.mark.iostest
+    def test_ios_url(self, ios_page):
+        print("\n[MOBILE] Current URL:", ios_page.url)
