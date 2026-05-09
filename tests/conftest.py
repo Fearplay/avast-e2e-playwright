@@ -5,7 +5,7 @@ from playwright.sync_api import Page
 @pytest.fixture(autouse=True)
 def accept_cookies(page: Page):
     page.goto("https://www.avast.com/en-us/")
-    page.locator("#onetrust-accept-btn-handler").click()
+    page.locator("#ensAcceptAllConsent").click()
     yield
 
 
@@ -16,7 +16,7 @@ def android_page(playwright, request):
     context = browser.new_context(**samsung)
     page = context.new_page()
     page.goto("https://www.avast.com/en-us/")
-    page.locator("#onetrust-accept-btn-handler")
+    page.locator("#ensAcceptAllConsent")
     yield page
     context.close()
     browser.close()
@@ -29,7 +29,7 @@ def ios_page(playwright):
     context = browser.new_context(**iphone)
     page = context.new_page()
     page.goto("https://www.avast.com/en-us/")
-    page.locator("#onetrust-accept-btn-handler")
+    page.locator("#ensAcceptAllConsent")
     yield page
     context.close()
     browser.close()

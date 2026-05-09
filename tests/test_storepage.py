@@ -6,7 +6,7 @@ from playwright.sync_api import Page, expect
 
 @pytest.fixture(scope="function")
 def go_to_store(page: Page):
-    page.get_by_role("menuitem", name="Store").click()
+    page.get_by_role("link", name="Store").click()
     yield
 
 
